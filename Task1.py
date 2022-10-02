@@ -3,10 +3,15 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-num = int(input('Введите число: '))
+string = str(input('Введите число: '))
+num = string.replace('.', '') 
+num = int(num)
 sum = 0
 while num > 0:
     n = num % 10
+    print(n)
     sum = sum + n
+    print(sum)
     num = num // 10
+    print(num)
 print('Сумма цифр: ', sum)
