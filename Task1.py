@@ -9,9 +9,6 @@ num = int(num)
 sum = 0
 while num > 0:
     n = num % 10
-    print(n)
     sum = sum + n
-    print(sum)
     num = num // 10
-    print(num)
 print('Сумма цифр: ', sum)
