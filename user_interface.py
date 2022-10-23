@@ -12,6 +12,7 @@ while True:
 
     if point == 0:
         break
+
     elif point == 1:
         print(file_preview.preview())
 
