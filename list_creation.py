@@ -4,7 +4,7 @@ import csv
 
 
 def list_creation (n):
-    result_list = 'folder'
+    result_list = 'school'
     person_string = []
 
     if not os.path.exists(result_list):

@@ -18,10 +18,14 @@ def wheel_of_random():
     if 'ж_' in person[0]:
         person[0] = person[0].replace('ж_', '')
         surname_r = surname_r + 'а'
+        person.append(surname_r)
+        person.append('жен')
 
-    person.append(surname_r)
+    else:
+        person.append(surname_r)
+        person.append('муж')
 
-    y = random.randrange(1960, 2000)
+    y = random.randrange(2005, 2016)
     m = random.randrange(1, 12)
     if m == 4 or m == 6 or m == 9 or m == 11:
         d = random.randrange(1, 31)
@@ -33,11 +37,13 @@ def wheel_of_random():
     date = datetime.date(y, m, d).strftime('%d.%m.%Y')
     person.append(date)
 
-    data_j = open('Job.txt', 'r', encoding='utf-8')
-    job_r = random.choice(data_j.readlines()).split('\n')
-    person.append(''.join(job_r))
+    clas = 2022 - (y + 6)
+    person.append(clas)
+    
+    lit = ['А', 'Б', 'В']
+    person.append(random.choice(lit))
 
-    n = random.randrange(1, 4) 
+    n = random.randrange(1, 3) 
 
     for i in range(n):
         num = '+79'
