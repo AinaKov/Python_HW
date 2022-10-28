@@ -134,7 +134,7 @@ def re_numb(full_n_f):
                 f.write(new_string)
                 num = int(num) + 1
 
-def find_string_class(full_n_f, search):
+def find_string_class(full_n_f, search, mark):
     numers = []
     new_list = []
     with open(full_n_f, 'r') as file:
@@ -142,18 +142,6 @@ def find_string_class(full_n_f, search):
 
             if search in line:
                 numers.append(num_line)
-                new_list.append(line.split(';')[0] + ' ' + line.split(';')[1] + ' ' + line.split(';')[2] + '\n')
-
-        return(''.join(new_list))
-
-def print_string_class(full_n_f, search):
-    numers = []
-    new_list = []
-    with open(full_n_f, 'r') as file:
-        for num_line, line in enumerate(file):
-
-            if search in line:
-                numers.append(num_line)
-                new_list.append(line.split(';')[0] + ';' + line.split(';')[1] + ';' + line.split(';')[2] + '\n')
+                new_list.append(line.split(';')[0] + mark + line.split(';')[1] + mark + line.split(';')[2] + '\n')
 
         return(''.join(new_list))

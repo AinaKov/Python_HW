@@ -46,7 +46,7 @@ def work_cab(name_f, name_f_pers):
             if point_2_cab == 1:
                 for i in range(len(student_list)):
                         search_text = student_list[i]
-                        string_number = function.find_string_class(name_f_pers, search_text)
+                        string_number = function.find_string_class(name_f_pers, search_text, ' ')
                         print(f'\nУченики "{search_text}" класса:\n{string_number}')
                         
 
@@ -55,7 +55,7 @@ def work_cab(name_f, name_f_pers):
                 with open('new_list.csv', 'w') as f:
                     for i in range(len(student_list)):
                         search_text = student_list[i]
-                        string_number = function.print_string_class(name_f_pers, search_text)
+                        string_number = function.find_string_class(name_f_pers, search_text, ';')
                         f.write(f'\nУченики "{search_text}" класса:\n{string_number}')
                     
                 print('Результат в файле - new_list.csv')
